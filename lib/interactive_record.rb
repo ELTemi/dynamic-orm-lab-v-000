@@ -63,7 +63,6 @@ class InteractiveRecord
     adjusted_value = value.class == Fixnum ? value : "'#{value}'"
     sql = "SELECT * FROM #{self.table_name} WHERE attribute.keys.first = '#{adjusted_value}'"
     DB[:conn].execute(sql)
-    binding.pry
   end
 
 end
